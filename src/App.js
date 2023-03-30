@@ -3,7 +3,13 @@ import AddUsers from "./components/Users/AddUsers";
 import UsersList from "./components/Users/UsersList";
 import "./App.css";
 function App() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([
+    {
+      enteredName: "Ahmed Basouny",
+      enteredAge: "24",
+      id: Math.random().toString(),
+    },
+  ]);
 
   const addUsersHandler = (enteredName, enteredAge) => {
     setUsers((prevUser) => {
